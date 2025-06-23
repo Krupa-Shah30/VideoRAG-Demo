@@ -46,8 +46,9 @@ def mark_video_processed(hash_str, record_file='embedded_videos.json'):
         json.dump(processed, f, indent=2)
 
 def run_pipeline(video_file):
-    directory = r"C:/Users/Yash S/Downloads"
-    video_path= os.path.join(directory, video_file)
+    print(video_file)
+    directory = "C:/Users/YashShetty/Downloads"
+    video_path= directory + "/" + video_file
 # def run_pipeline():
 #     video_path=r"C:/Users/Yash S/Documents/vrag_videos/WhatMakesAComputer.mp4"
 
@@ -68,7 +69,7 @@ def run_pipeline(video_file):
 
 
     # Create output dirs
-    working_dir=r"C:/Users/Yash S/Documents/Output_Videos"
+    working_dir=r"C:/Users/YashShetty/Documents/Output_Videos"
     frame_dir = os.path.join(working_dir, "Frames")
     audio_dir = os.path.join(working_dir, "Audio")
     transcript_dir = os.path.join(working_dir, "Transcript")

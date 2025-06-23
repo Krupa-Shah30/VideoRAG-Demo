@@ -38,13 +38,13 @@ def verify_api_key(x_api_key: str = Header(...)):
 # --- Endpoints ---
 @router.post("/process")
 async def input_processing(request: ExtractRequest):
-    # Implement your logic he
-    video_input = request.videoPath
-    #output_path = request.outputPath  # ✅ Use from request
-    print("Processing started")
-    x=run_pipeline()
-    return {"message": "Embedding completed successfully. You can now query the vector database."}
-
+    try:
+        print("Processing started")
+        qdrant, embedder = run_pipeline(request.videoPath)
+        return {"message": "Processing complete"}
+    except Exception as e:
+        print("🔥 Error in processing:", str(e))
+        raise HTTPException(status_code=500, detail=str(e))
 
 
 

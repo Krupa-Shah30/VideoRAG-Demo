@@ -34,7 +34,7 @@ class LLMResponder:
         pass
     def call_llm(self, prompt: str, results_final:dict = None) -> str:    
         # print(results_final["text"])
-        print(results_final["images"])
+        #print(results_final["images"])
 
         try:
             
@@ -59,7 +59,7 @@ class LLMResponder:
     )
             client = OpenAI(
             base_url="https://openrouter.ai/api/v1",
-            api_key="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",
+            api_key="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",
         )
 
        

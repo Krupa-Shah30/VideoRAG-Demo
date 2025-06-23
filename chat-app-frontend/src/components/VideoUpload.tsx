@@ -82,8 +82,8 @@ const VideoUpload: React.FC<Props> = ({ setVideoUrl, setError }) => {
       throw new Error(err.error || "Upload failed");
     }
     const data = await res.json(); 
-    const fullUrl = `http://localhost:8000/WhatMakesAComputer.mp4`;
-    setVideoUrl(fullUrl);
+    // const fullUrl = `http://localhost:8000/WhatMakesAComputer.mp4`;
+    // setVideoUrl(fullUrl);
     setUploadedFilename(data.filename);
 
   } catch (err: any) {

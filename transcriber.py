@@ -11,7 +11,7 @@ class AudioTranscriber:
         os.makedirs(output_folder, exist_ok=True)
         print(f"🔊 Transcribing: {audio_path}")
 
-        segments, _ = self.model.transcribe(audio_path)
+        segments, _ = self.model.transcribe(audio_path)  #word_timestamps=True, language="en", beam_size=5)
         transcript_text = " ".join(segment.text.strip() for segment in segments)
 
         filename = os.path.basename(audio_path).replace(".mp3", "_plain.txt")
