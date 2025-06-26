@@ -24,12 +24,12 @@ const VideoUpload: React.FC<Props> = ({ setVideoUrl, setError }) => {
     const previewUrl = URL.createObjectURL(file);
     setVideoUrl(previewUrl);
 
-    const a = document.createElement('a');
-            a.href = URL.createObjectURL(file);
-            const filename = `video-${new Date().toISOString()}.mp4`;
-            a.download = filename;
-            document.body.appendChild(a);
-            a.click();
+    // const a = document.createElement('a');
+    //         a.href = URL.createObjectURL(file);
+    //         const filename = `video-${new Date().toISOString()}.mp4`;
+    //         a.download = filename;
+    //         document.body.appendChild(a);
+    //         a.click();
 
     if (!file.type.startsWith('video/')) {
       setError('Please upload a valid video file.');
@@ -64,8 +64,9 @@ const VideoUpload: React.FC<Props> = ({ setVideoUrl, setError }) => {
   // }, []);
 
   try {
-    const formData = new FormData();
-    formData.append("videoPath", filename);
+    // const formData = new FormData();
+    // formData.append("videoPath", filename);
+    const filename=file.name;
 
     const res = await fetch("http://localhost:8000/process", {
       method: "POST",
