@@ -1,0 +1,22 @@
+[0.00s] Everywhere you look, computers are changing the world, whether they're on our
+[4.90s] desktops, in our homes, our pockets, or just about anywhere else.
+[4.90s] But while most
+[11.24s] of us use this revolutionary technology daily, we don't often ask how to
+[16.52s] computers work.
+[16.52s] In this series, you're going to learn how computers really work,
+[21.72s] starting with what makes a computer, a computer.
+[21.72s] Then you'll look at how
+[26.96s] information is represented inside the computer using tiny electrical signals
+[31.84s] going on and off at mind-boggling speeds.
+[31.84s] After that, you'll learn how computers
+[38.20s] use circuits to do everything from simple math to simulating entire virtual
+[43.36s] worlds.
+[43.36s] Next, you'll zoom out and look at the different parts of a computer
+[48.52s] that actually input, output, and store all that information.
+[48.52s] Finally, you'll
+[54.84s] take a look at what code actually is and how software controls hardware.
+[54.84s] So
+[60.48s] whether you're just curious about the devices you use every day, are you
+[64.28s] want to design the innovations of the future?
+[64.28s] The first step is learning how
+[69.28s] computers work.

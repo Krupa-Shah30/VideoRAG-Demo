@@ -1,0 +1,59 @@
+[0.00s] My name is Melee Koo and I'm a designer and an inventor.
+[10.48s] So some of the things I've designed have been at Apple and now I design products for kids
+[14.80s] to use so that they can have an easier time in school.
+[18.08s] My other jobs include DJing and dancing.
+[26.72s] Everywhere there are people's pockets, there are people's cars, people have them on their
+[32.48s] wrists.
+[32.48s] They might be in your backpack right now but what makes a computer a computer?
+[38.96s] What does make a computer a computer anyway?
+[41.28s] And how does it even work?
+[46.72s] Hi I'm Nat.
+[46.72s] I was one of the original designers of the Xbox.
+[50.72s] I've been working with computers since I was maybe seven years old and now I work on virtual
+[56.00s] reality.
+[67.28s] As humans we've always built tools to help us solve problems.
+[70.48s] Tools like a wheelbarrow, a hammer or a printing press or a tractor trailer.
+[76.24s] All of these inventions helped us with manual work.
+[79.36s] Over time people began to wonder if a machine could be designed and built to help us with
+[84.40s] the thinking work we do, like solving equations or tracking the stars in the sky.
+[89.92s] Rather than moving or manipulating physical things like dirt and stone,
+[94.16s] these machines would need to be designed to manipulate information.
+[99.76s] As the pioneers of computer science explored how to design a thinking machine,
+[103.60s] they realized that it had to perform four different tasks.
+[107.04s] It would need to take input, store information, process it and then output the results.
+[116.80s] Now this might sound simple but these four things are common to all computers.
+[122.48s] That's what makes a computer a computer.
+[127.52s] The earliest computers were made out of wood and metal with mechanical levers and gears.
+[132.40s] By the 20th century, though, computers started using electrical components.
+[137.20s] These early computers were really large and really slow.
+[140.56s] A computer the size of a room might take hours just to do a basic math problem.
+[147.04s] These machines are things of gleaming very colored metal and numerous flashing lights.
+[152.40s] Computers started out as basic calculators, which was already really awesome at the time
+[158.40s] and they were only manipulating numbers back then.
+[161.04s] But now we can use them to talk to each other, we can use them to play games,
+[165.36s] control robots and do any crazy thing that you could probably imagine.
+[170.72s] Modern computers look nothing like those clunky old machines but they still do these same four things.
+[182.80s] First we're going to talk about input.
+[184.48s] This is my favorite because what input is is the stuff that the world does or that you do that
+[190.40s] makes the computer do stuff.
+[190.40s] You can tell a computer what to do with a keyboard,
+[194.24s] you can tell them what to do with a mouse, the microphone, the camera, and now if you're
+[199.04s] wearing a computer on your wrist, it might listen to your heartbeat or in your car.
+[203.20s] It might be listening to what the car is doing and a touchscreen can actually sense your finger
+[208.88s] and it takes that as input on what it's doing.
+[211.36s] All these different inputs give a computer information which is then stored in memory.
+[222.08s] A computer's processor takes information from memory, it manipulates it or changes it using
+[227.28s] an algorithm which is just a series of commands and then it sends the processed information back
+[232.64s] to be stored in memory again.
+[232.64s] This continues until the processed information is ready to be output.
+[241.28s] How a computer outputs information depends on what the computer is designed to do.
+[247.20s] A computer display can show text, photos, videos, or interactive games, even virtual reality.
+[253.36s] The output of a computer may even include signals to control a robot and when computers connect
+[258.64s] over the internet, the output from one computer becomes the input to another and vice versa.
+[265.52s] The computers we use today look really different from the earliest thinking machines.
+[270.00s] And who knows what the computers of tomorrow will be like?
+[272.64s] My hope is that you get to help decide what you want the computers of tomorrow to look like.
+[277.52s] But across all computers, regardless of the different types of technology they use,
+[281.68s] they're all doing the same for things.
+[281.68s] They take in information, they store it as data,
+[287.92s] they process it, and then they output the results.

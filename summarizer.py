@@ -1,6 +1,25 @@
 from sklearn.feature_extraction.text import TfidfVectorizer
 import numpy as np
 import os
+from transformers import pipeline
+import textwrap
+
+# Load the summarization pipeline once
+summarizer = pipeline("summarization", model="facebook/bart-large-cnn", device=-1)  # device=-1 for CPU
+
+def summarize_text(text, max_chunk_length=1024):
+    """
+    Summarize the input text using a local Hugging Face model.
+    Splits long text into chunks to fit model limits.
+    """
+    # Split text into manageable chunks
+    chunks = textwrap.wrap(text, max_chunk_length)
+    summaries = []
+    for chunk in chunks:
+        summary = summarizer(chunk, max_length=130, min_length=30, do_sample=False)[0]['summary_text']
+        summaries.append(summary)
+    # Combine all summaries into one
+    return " ".join(summaries)
 
 class TranscriptSummarizer:
     def summarize(self, transcript_folder, output_folder, num_keywords=10):

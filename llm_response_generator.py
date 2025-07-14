@@ -26,6 +26,7 @@
 #         return response.choices[0].message["content"]
 
 import os
+import base64
 from openai import OpenAI
 
 
@@ -53,13 +54,13 @@ class LLMResponder:
     # Build image references
             image_refs = "\n".join(
         [
-            f"Image Frame {i + 1} (~{img['timestamp']:.2f}s): {img['frame']}"
+            f"Image Frame {i + 1} (~{img.get('timestamp_guess', 0):.2f}s): {img['frame']}"
             for i, img in enumerate(results_final["images"])
         ]
     )
             client = OpenAI(
             base_url="https://openrouter.ai/api/v1",
-            api_key="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",
+            api_key="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",
         )
 
        
@@ -92,12 +93,23 @@ Relevant Frame References (timestamps + filenames only, full visuals sent below)
 
 # Then append all actual image blocks
             for img in results_final["images"]:
-                 content_blocks.append({
-                "type": "image_url",
-                "image_url": {
-                "url": img["frame"]
-                             }
-                                    })
+                # Convert local image to base64
+                image_path = img["path"]
+                try:
+                    with open(image_path, "rb") as image_file:
+                        image_data = image_file.read()
+                        base64_image = base64.b64encode(image_data).decode('utf-8')
+                    
+                    content_blocks.append({
+                        "type": "image_url",
+                        "image_url": {
+                            "url": f"data:image/jpeg;base64,{base64_image}"
+                        }
+                    })
+                except Exception as e:
+                    print(f"⚠️ Failed to load image {image_path}: {e}")
+                    # Skip this image if we can't load it
+                    continue
 
             completion = client.chat.completions.create(
                 model="qwen/qwen2.5-vl-72b-instruct:free",

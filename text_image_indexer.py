@@ -3,44 +3,56 @@ from llama_index.core.schema import TextNode, ImageNode
 import os
 import config
 from PIL import Image
+import re
 
 class TextImageIndexer:
-    def __init__(self, embedder, chunk_size=200, chunk_overlap=50):
+    def __init__(self, embedder, chunk_size=200, chunk_overlap=50, video_hash=None):
         self.embedder = embedder
         self.splitter = RecursiveCharacterTextSplitter(
-            chunk_size= config.CHUNK_SIZE,
+            chunk_size=config.CHUNK_SIZE,
             chunk_overlap=config.CHUNK_OVERLAP,
             separators=["\n\n", "\n", ". ", " ", ""]
         )
+        self.video_hash = video_hash  # ✅ Store the video hash for later use
 
     def index_text(self, transcript_dir):
         """
-        - Splits transcript files into chunks
+        - Splits transcript files into chunks using real timestamps from transcript
         - Embeds them
         - Wraps in TextNode objects with metadata
         """
         nodes = []
+        timestamp_pattern = re.compile(r"\[(\d+\.?\d*)s\]\s*(.*)")
+
         for fname in os.listdir(transcript_dir):
             if not fname.endswith(".txt"):
                 continue
 
             path = os.path.join(transcript_dir, fname)
             with open(path, 'r', encoding='utf-8') as f:
-                full_text = f.read()
+                lines = f.readlines()
 
-            chunks = self.splitter.split_text(full_text)
             video_id = os.path.splitext(fname)[0]
 
-            for i, chunk in enumerate(chunks):
-                embedding = self.embedder.embed_text(chunk)
+            for i, line in enumerate(lines):
+                match = timestamp_pattern.match(line)
+                if not match:
+                    continue
+                timestamp = float(match.group(1))
+                text = match.group(2).strip()
+                if not text:
+                    continue
+
+                embedding = self.embedder.embed_text(text)
                 node = TextNode(
-                    text=chunk,
+                    text=text,
                     metadata={
                         "type": "text",
                         "video_id": video_id,
+                        "video_hash": self.video_hash,  # ✅ Include hash here
                         "source": fname,
                         "chunk_index": i,
-                        "timestamp": i * 5 # ← Estimation: 5 sec per chunk; refine as needed
+                        "timestamp": timestamp  # Use real timestamp!
                     }
                 )
                 node.embedding = embedding
@@ -66,6 +78,7 @@ class TextImageIndexer:
                             metadata={
                                 "type": "image",
                                 "video_id": folder,
+                                "video_hash": self.video_hash,  # ✅ Include hash here
                                 "source": img_file,
                                 "image_path": img_path
                             }

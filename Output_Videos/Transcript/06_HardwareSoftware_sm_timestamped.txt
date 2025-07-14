@@ -1,0 +1,68 @@
+[0.00s] Hi, my name's Erica Gomez and I'm an Engineering Manager at Amazon.com.
+[13.34s] One of the best things about working in tech and Amazon in particular is that I get to
+[17.20s] bring my dog with me to work every day.
+[19.88s] My job is to help make sure software gets out the door and her job is to nap under my
+[25.04s] desk and snore very loudly.
+[28.96s] My name is Jerome Holman and I'm a program manager on Team Xbox and I have a really
+[33.60s] fun job basically bringing the hardware and the software together to give you all the
+[40.68s] games that you love on your Xbox.
+[45.56s] When you look inside a computing device, you see a bunch of circuits, chips, wires, speakers,
+[52.00s] plugs, and all sorts of other stuff.
+[54.72s] This is the hardware, but what you don't see is the software.
+[60.24s] Software is all of the computer programs or code running on this machine.
+[65.10s] Software can be anything from apps and games to web pages and the data science software
+[69.76s] that me and my teams use at Amazon to understand how customers behave.
+[74.00s] But how do the hardware and the software interact with one another?
+[78.56s] Let's start at looking at a computer's central processing unit or CPU.
+[83.52s] The CPU is the master chip that controls all the other parts of the computer.
+[88.48s] A CPU needs to do different things, so inside it has smaller, simpler parts that handle
+[96.40s] specific tasks.
+[98.52s] It has circuits to do simple math and logic.
+[102.08s] It has other circuits to send and receive information to and from different parts of
+[108.20s] the computer.
+[110.28s] The real magic of the CPU is how it knows which circuits to use and when to use them.
+[118.32s] The CPU receives simple commands that tell it which circuit to use to do a specific job.
+[123.96s] For example, an ad command tells the CPU to use its adder circuit to calculate a new
+[128.80s] number.
+[130.32s] And then the store command tells the CPU to use a different circuit to save that result
+[134.04s] into memory.
+[136.48s] Just like numbers, all of these simple commands can be represented in binary ones and zeros
+[141.92s] or on and off electrical signals.
+[147.20s] The binary commands are stored in memory and the CPU fetches and executes them in sequence,
+[152.88s] one after the other.
+[155.56s] This sequence of commands is in fact a very simple computer program.
+[160.92s] Memory code is the most basic form of software and it controls all the hardware of a computer.
+[167.48s] These days, nobody writes software in binary.
+[170.84s] It would take forever.
+[172.44s] Today, the software we write looks more like this or this or even this.
+[181.36s] Programming languages like these let you type in commands and something that looks a lot
+[185.64s] like English.
+[188.28s] To draw a rectangle on the screen, you just need a single command.
+[193.60s] This high level command is converted into hundreds or thousands of simpler binary commands
+[200.32s] that the CPU understands.
+[205.40s] Software tells the CPU what to do.
+[208.44s] But when you're listening to music and browsing the web and chatting with a friend, your
+[213.24s] computer is running multiple pieces of software all at once.
+[217.28s] So how do all of these programs get on the computer in the first place and how can the
+[221.52s] CPU run them all at once?
+[223.76s] To find out, we'll have to take a look at the operating system.
+[228.56s] The operating system of a computer is the master program that manages how software gets
+[233.68s] to use the hardware of the computer.
+[236.40s] For example, I help create the Windows operating system that runs on most personal computers.
+[242.68s] The operating system is a program with special abilities that let it control the other software
+[248.08s] on the computer.
+[249.64s] It lets you install new programs by loading them into your computer's memory.
+[254.40s] It decides when a program is run by the central processing unit and whether that program
+[259.44s] can access the computer's input and output devices.
+[263.20s] And when you think your computer is running many programs at once, in reality, it's the
+[267.80s] operating system that's quickly switching between programs, sharing that CPU for fractions
+[273.60s] of a second.
+[275.84s] Inside every computer is an operating system managing software that controls the computer's
+[280.04s] hardware.
+[281.32s] The software is a series of commands made of simple binary code, and that binary code is
+[285.80s] just electrical signals flowing through billions of tiny circuits.
+[290.76s] Computers have the potential to do all kinds of amazing things.
+[295.28s] But the only thing that makes computer smart or useful is you.
+[299.52s] When you learn the code, you get to define the problem you want to solve.
+[302.96s] I'm right the software that turns those ideas into reality.
+[307.04s] That gives you the power to build things that matter to you, your community, and the world.

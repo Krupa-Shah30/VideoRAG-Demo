@@ -36,3 +36,5 @@ qdrant/
 
 # # OS
 # *.swp
+
+.config/

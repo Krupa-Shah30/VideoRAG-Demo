@@ -5,7 +5,10 @@ interface Props {
   setAnswer: (answer: any) => void;
   setLoading: (loading: boolean) => void;
   setError: (error: string | null) => void;
-  setAnswerTimestamp: (answerTimestamp: string | null) => void;
+  setAnswerTimestamp: (answerTimestamp: number | null) => void; // <-- changed to number
+  videoHash?: string | null; // <-- add this
+  videoFile?: File | null;   // <-- add this if needed
+  disabled?: boolean; // <-- ensure this is present
 }
 
 const QueryInput: React.FC<Props> = ({
@@ -14,6 +17,8 @@ const QueryInput: React.FC<Props> = ({
   setLoading,
   setError,
   setAnswerTimestamp,
+  videoHash,
+  disabled,
 }) => {
   const [query, setQuery] = useState("");
   const [localLoading, setLocalLoading] = useState(false);
@@ -38,19 +43,20 @@ const QueryInput: React.FC<Props> = ({
     setAnswerTimestamp(null);
 
     try {
+      // Pass videoHash to backend if available
       const response = await fetch("http://localhost:8000/query", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
-          video_url: videoUrl,
           query: query,
+          video_hash: videoHash, // <-- pass hash
         }),
       });
 
       if (!response.ok) {
-        throw new Error("API error");
+        throw new Error("API error video not uploaded");
       }
 
       const data = await response.json();
@@ -59,8 +65,6 @@ const QueryInput: React.FC<Props> = ({
       }
       setAnswer(data.synthesized_answer);
       setAnswerTimestamp(data.start_timestamp);
-
-      console.log(data.start_timestamp)
 
       // Scroll to answer box
       setTimeout(() => {
@@ -89,27 +93,30 @@ const QueryInput: React.FC<Props> = ({
   };
 
   return (
-    <div className="my-4 max-w-md mx-auto">
+    <div className="my-4 max-w-xl mx-auto flex items-center gap-4">
       <input
         type="text"
         value={query}
         onChange={(e) => setQuery(e.target.value)}
         onKeyDown={handleKeyDown}
         placeholder="Ask a question"
-        className="border px-2 py-1 mb-2 max-w-sm w-full md:w-[74%] text-sm rounded border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-300"
-        disabled={localLoading}
+        className="border-4 border-[#140C64] px-4 py-3 rounded-l-lg text-lg flex-1 focus:outline-none focus:ring-2 focus:ring-blue-300 shadow-sm"
+        disabled={localLoading || disabled}
+        style={{ minWidth: '250px' }}
       />
       <button
         onClick={handleSubmit}
-        disabled={localLoading}
-        className={`py-1 text-white font-semibold rounded-md transition text-sm ${
-          localLoading ? "bg-gray-400 cursor-not-allowed" : "bg-blue-600 hover:bg-blue-700"
-        } ml-auto md:ml-4 md:w-[22%]`}
+        disabled={localLoading || disabled}
+        className={`px-6 py-3 rounded-r-lg text-2xl font-extrabold transition-colors duration-200 shadow-sm ${
+          localLoading
+            ? "bg-gray-400 cursor-not-allowed"
+            : "bg-[#ee2d3d] hover:bg-[#d72631] text-white"
+        }`}
+        style={{ minWidth: '140px' }}
       >
         {localLoading ? "Searching..." : "Search"}
       </button>
-
-      {localError && <p className="text-red-600 mt-2 text-sm">{localError}</p>}
+      {localError && <p className="text-red-600 mt-2 text-sm w-full">{localError}</p>}
     </div>
   );
 };

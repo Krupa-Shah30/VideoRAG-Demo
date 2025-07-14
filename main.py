@@ -2,6 +2,8 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from apiRoutes import router
 import uvicorn
+from fastapi.staticfiles import StaticFiles
+import os
 
 app = FastAPI()
 
@@ -13,6 +15,11 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
+
+# Ensure the directory exists
+os.makedirs("uploaded_videos", exist_ok=True)
+# Mount the uploaded_videos directory for static file serving
+app.mount("/uploaded_videos", StaticFiles(directory="uploaded_videos"), name="uploaded_videos")
 
 app.include_router(router)
 

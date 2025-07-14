@@ -8,13 +8,15 @@ class FrameExtractor:
         self.frame_rate = frame_rate
 
     def extract_frames(self, video_path, output_folder):
-        if not (os.path.isfile(video_path) and video_path.lower().endswith(".mp4")):
+        # Ensure video_path is a string for os and string methods
+        video_path_str = str(video_path)
+        if not (os.path.isfile(video_path_str) and video_path_str.lower().endswith(".mp4")):
             raise ValueError(f"❌ Expected a single .mp4 file. Got: {video_path}")
 
         os.makedirs(output_folder, exist_ok=True)
 
-        video_file = os.path.basename(video_path)
-        cap = cv2.VideoCapture(video_path)
+        video_file = os.path.basename(video_path_str)
+        cap = cv2.VideoCapture(video_path_str)
         fps = cap.get(cv2.CAP_PROP_FPS)
 
         if fps == 0 or not cap.isOpened():

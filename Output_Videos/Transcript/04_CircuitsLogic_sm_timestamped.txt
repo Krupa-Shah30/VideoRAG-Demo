@@ -1,0 +1,62 @@
+[0.00s] One of the coolest things I've discovered about circuits is circuitry can be in art form.
+[14.08s] Like if I have a creative idea, I can get that creative idea out using circuits.
+[20.28s] So if you have ideas, you can use technology to make those ideas come to life.
+[27.32s] Every input or output of a computer is effectively a type of information which can be represented
+[34.28s] by on or off electrical signals for ones and zeros.
+[39.56s] In order to process the information that comes in as input and to make the information
+[45.16s] that's output, a computer needs to modify and combine the input signals.
+[51.00s] To do this, a computer uses millions of teeny electronic components which come together
+[57.20s] to form circuits.
+[63.44s] Let's take a closer look at how circuits can modify and process information that's represented
+[67.60s] in ones and zeros.
+[69.96s] This is an incredibly simple circuit.
+[72.48s] It takes an electrical signal, on or off, and it flips it.
+[76.32s] So if the signal you give it is a one, the circuit gives you a zero.
+[80.68s] And if you give the circuit a zero, it gives you a one.
+[84.08s] The signal that goes in is not the same as the signal that comes out.
+[87.60s] And so we call this circuit not.
+[90.56s] More complicated circuits can take multiple signals and combine them and give you a different
+[95.76s] result.
+[97.12s] In this example, a circuit will take two electrical signals.
+[101.32s] Now each one might be a one or a zero.
+[104.00s] If either of the signals coming in is a zero, then the result is also a zero.
+[110.16s] This circuit will only give you a one if the first signal and the second signal are both
+[117.32s] a one.
+[118.32s] And so we call the circuit and there are many small circuits like this that perform simple
+[124.88s] logical calculations.
+[126.84s] By connecting these circuits together, we can make more complex circuits that perform
+[131.60s] more complex calculations.
+[134.44s] For example, you can make a circuit that adds two bits together, called an adder.
+[140.36s] This circuit takes in two individual bits, each one a one or a zero, and adds them together
+[145.92s] to calculate the sum.
+[147.84s] The sum can be 0 plus 0 equals 0, 0 plus 1 equals 1, or 1 plus 1 equals 2.
+[154.84s] You need two wires coming out because it can take up to two binary digits to represent
+[159.16s] the sum.
+[160.60s] Once you have a single adder for adding two bits of information, you can put together
+[165.36s] multiples of these adder circuits side by side to add together much larger numbers.
+[171.60s] For example, here's how an eight-bit adder adds the numbers 25 and 50.
+[177.88s] Each number is represented using eight bits, resulting in 16 different electrical signals
+[182.64s] that go into the circuit.
+[185.40s] The circuit for an eight-bit adder has lots of little adders inside of it, which together
+[189.92s] calculate the sum.
+[192.80s] Different electrical circuits can perform other simple calculations, like subtraction
+[196.36s] or multiplication.
+[197.96s] In fact, all the information processing your computer does is just lots and lots of small
+[202.88s] simple operations put together.
+[205.40s] Each individual operation done by a computer is so, so simple, it could be done by a human,
+[210.92s] but these circuits inside computers are way, way faster.
+[215.32s] Back in the day, these circuits were big and clunky, and an eight-bit adder could be
+[220.48s] as big as a fridge, and it would take minutes for them to perform a simple calculation.
+[225.04s] Today, computer circuits are microscopic in size and way, way faster.
+[231.24s] Why are smaller computers also faster?
+[233.36s] Well, because the smaller the circuit is, the less distance the electrical signal has to
+[237.48s] go.
+[238.80s] Electricity moves at just about the speed of light, which is why modern circuits can
+[242.16s] perform billions of calculations per second.
+[245.76s] So whether you're playing a game, recording a video, or exploring the cosmos, everything
+[252.36s] you could possibly do with technology requires lots of information to be processed extremely
+[257.36s] quickly.
+[258.36s] Underneath all this complexity is just lots of tiny little circuits that turn binary signals
+[265.04s] into websites, videos, music and games.
+[268.24s] These circuits can even help us to code DNA to diagnose and cure disease.
+[272.48s] So what would you like to do with all these circuits?
