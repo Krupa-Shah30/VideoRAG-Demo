@@ -22,4 +22,4 @@ CHUNK_OVERLAP = int(os.getenv("CHUNK_OVERLAP", 50))
 VECTOR_DIM = int(os.getenv("VECTOR_DIM", 768))
 
 
-MIN_SCORE = 0.1
+MIN_SCORE = 0.05

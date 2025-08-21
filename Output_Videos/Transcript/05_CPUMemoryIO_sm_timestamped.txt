@@ -1,36 +1,35 @@
 [0.00s] Hi, my name is Madison Maxi.
-[0.00s] I have a company called Lumia.
-[0.00s] And we focus on making smart fabrics for smart clothing and smart self-good paddocks.
+[0.00s] I have a company called Lumia, and we focus on making smart fabrics for smart clothing and smart self-good paddocks.
 [22.00s] The sky's the limit when it comes to textiles.
-[25.00s] My name is Danielle Appelstone and I'm CEO of Other Machine Company.
+[25.00s] My name is Danielle Appelstone, and I'm CEO of Other Machine Company.
 [31.00s] We build a desktop milling machine.
-[31.00s] A milling machine takes a rotating cutting tool and moves it through material to create a 3D object.
-[43.00s] Under the hood, all computers do the same for basic things.
-[43.00s] They input information, store and process the information, and then output information.
+[34.00s] A milling machine takes a rotating cutting tool and moves it through material to create a 3D object.
+[42.00s] Under the hood, all computers do the same for basic things.
+[46.00s] They input information, store and process the information, and then output information.
 [53.00s] Each of these things is done by a different part of the computer.
 [57.00s] There are input devices that take input from the outside world and convert it into binary information.
-[65.00s] There is memory to store this information.
-[65.00s] There's a central processing unit or CPU where all the calculations are done.
+[64.00s] There is memory to store this information.
+[67.00s] There is a central processing unit or CPU, where all the calculations are done.
 [74.00s] And finally, there are output devices that take information and convert it into a physical output.
-[82.00s] Let's talk about input first.
-[82.00s] Computers can take many different types of input, like the keyboard of a computer, the touchpad of a phone, a camera, a microphone, or a GPS.
+[81.00s] Let's talk about input first.
+[84.00s] Computers can take many different types of input, like the keyboard of a computer, the touchpad of a phone, a camera, a microphone, or a GPS.
 [94.00s] But even the sensors on a car, a thermostat, or a drone, are also different input devices.
 [100.00s] Now let's look at a simple example of how input travels through a computer and becomes output.
 [107.00s] When you press a key on your keyboard, let's say the letter B, the keyboard converts the letter to a number.
 [114.00s] That number is sent as binary, ones and zeros, into the computer.
-[120.00s] Starting from this number, the CPU calculates how to display the letter B, pixel by pixel.
-[126.00s] The CPU requests step-by-step instructions from memory which tell it how to draw the letter B.
+[120.00s] Starting from this number, the CPU calculates how to display the letter B pixel by pixel.
+[126.00s] The CPU requests step-by-step instructions from memory, which tell it how to draw the letter B.
 [132.00s] The CPU runs these instructions and stores the results as pixels in memory.
 [138.00s] Finally, this pixel information is sent in binary to the screen.
 [143.00s] The screen is an output device, which converts the binary signals into the tiny lights and colors that make up what you see.
 [152.00s] This all happens so quickly it feels instantaneous.
-[156.00s] But to display each letter, a computer runs thousands of instructions, starting from the moment your finger presses the keyboard.
-[166.00s] In that example, the output device was the screen, but there are many different types of output which take a binary signal from the computer and do something in the physical world.
-[177.00s] For example, a speaker will play sound, and a 3D printer will print an object.
-[183.00s] Output devices can also control physical motion, like a robotic arm, the motor of a car, or the cutting tool of the milling machine that my company makes.
-[193.00s] New types of inputs and outputs let computers interact with the world in entirely new ways.
+[156.00s] But, to display each letter, a computer runs thousands of instructions, starting from the moment your finger presses the keyboard.
+[167.00s] In that example, the output device was screened, but there are many different types of output which take a binary signal from the computer and do something in the physical world.
+[178.00s] For example, a speaker will play sound and a 3D printer will print an object.
+[184.00s] Output devices can also control physical motion, like a robotic arm, the motor of a car, or the cutting tool of the milling machine that my company makes.
+[194.00s] New types of inputs and outputs let computers interact with the world in entirely new ways.
 [199.00s] This has been helped out by improvements to the speed and size of the memory and CPU.
-[205.00s] The more complicated a task is and the more information that's input or output, the more processing power and memory a computer needs.
-[214.00s] Typing letters on a screen may be easy, but to do complicated 3D graphics or record a high-definition movie, modern computers often have multiple CPUs to process all that information and many gigabytes of memory to store it.
-[231.00s] No matter what it is you want to do with a computer, every single action is about inputting information from the physical world,
-[241.00s] storing and processing that information and getting some output back into the physical world.
+[205.00s] The more complicated a task is, and the more information that's input or output, the more processing power and memory a computer needs.
+[214.00s] Typing letters on a screen may be easy, but to do complicated 3D graphics or record a high-definitioned movie,
+[221.00s] modern computers often have multiple CPUs to process all that information, and many gigabytes of memory to store it.
+[231.00s] No matter what it is you want to do with a computer, every single action is about inputting information from the physical world, storing and processing that information, and getting some output back into the physical world.

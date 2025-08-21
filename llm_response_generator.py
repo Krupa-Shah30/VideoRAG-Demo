@@ -60,7 +60,7 @@ class LLMResponder:
     )
             client = OpenAI(
             base_url="https://openrouter.ai/api/v1",
-            api_key="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",
+            api_key=os.getenv("API_KEY"),
         )
 
        

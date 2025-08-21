@@ -4,6 +4,9 @@ from apiRoutes import router
 import uvicorn
 from fastapi.staticfiles import StaticFiles
 import os
+from dotenv import load_dotenv
+
+load_dotenv()
 
 app = FastAPI()
 
