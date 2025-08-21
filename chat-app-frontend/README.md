@@ -1,65 +1,54 @@
-# Chat Application
+# React + TypeScript + Vite
 
-This is a modular chat application built with React and TypeScript. The application features a clean and user-friendly interface, allowing users to engage in conversations seamlessly.
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-## Project Structure
+Currently, two official plugins are available:
 
-The project is organized into the following main directories and files:
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-- **src/**: Contains all the source code for the application.
-  - **components/**: Contains reusable components for the application.
-    - **Sidebar/**: The sidebar component with navigation and user options.
-    - **MainPanel/**: The main panel displaying chat content and actions.
-    - **ChatInput/**: The input area for typing messages and sending them.
-    - **ThemeControls/**: Controls for theme settings (light/dark mode).
-    - **Settings/**: Component for managing application settings.
-  - **App.tsx**: The main application component that integrates all components.
-  - **index.tsx**: The entry point of the application.
-  - **types/**: Contains TypeScript types and interfaces used throughout the application.
+## Expanding the ESLint configuration
 
-- **public/**: Contains static files, including the main HTML template.
-  - **index.html**: The HTML file that serves as the template for the application.
+If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
 
-- **package.json**: Configuration file for npm, listing dependencies and scripts.
+```js
+export default tseslint.config({
+  extends: [
+    // Remove ...tseslint.configs.recommended and replace with this
+    ...tseslint.configs.recommendedTypeChecked,
+    // Alternatively, use this for stricter rules
+    ...tseslint.configs.strictTypeChecked,
+    // Optionally, add this for stylistic rules
+    ...tseslint.configs.stylisticTypeChecked,
+  ],
+  languageOptions: {
+    // other options...
+    parserOptions: {
+      project: ['./tsconfig.node.json', './tsconfig.app.json'],
+      tsconfigRootDir: import.meta.dirname,
+    },
+  },
+})
+```
 
-- **tsconfig.json**: TypeScript configuration file specifying compiler options.
+You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
 
-## Setup Instructions
+```js
+// eslint.config.js
+import reactX from 'eslint-plugin-react-x'
+import reactDom from 'eslint-plugin-react-dom'
 
-1. Clone the repository:
-   ```
-   git clone <repository-url>
-   ```
-
-2. Navigate to the project directory:
-   ```
-   cd chat-app-frontend
-   ```
-
-3. Install dependencies:
-   ```
-   npm install
-   ```
-
-4. Start the development server:
-   ```
-   npm start
-   ```
-
-5. Open your browser and go to `http://localhost:3000` to view the application.
-
-## Usage Guidelines
-
-- Use the sidebar to navigate through different chat options.
-- The main panel displays the chat interface and suggested questions.
-- Type your messages in the chat input box at the bottom of the screen.
-- Use the theme controls to switch between light and dark modes.
-- Access settings to customize your application preferences.
-
-## Contributing
-
-Contributions are welcome! Please open an issue or submit a pull request for any enhancements or bug fixes.
-
-## License
-
-This project is licensed under the MIT License. See the LICENSE file for more details.
+export default tseslint.config({
+  plugins: {
+    // Add the react-x and react-dom plugins
+    'react-x': reactX,
+    'react-dom': reactDom,
+  },
+  rules: {
+    // other rules...
+    // Enable its recommended typescript rules
+    ...reactX.configs['recommended-typescript'].rules,
+    ...reactDom.configs.recommended.rules,
+  },
+})
+```
